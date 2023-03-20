@@ -23,4 +23,15 @@ $(document).ready(function () {
     $(".c_more4").click(function () {
         $(".cmo4").toggle("slow");
     });
+    $(window).scroll(function(){
+        if($(this).scrollTop()>600){
+            $(".scroll_up").fadeIn();
+        }else{
+            $(".scroll_up").fadeOut();
+        }
+    });
+    $(".scroll_up").click(function(){
+        $("html, body").animate({scrollTop: 0}, 600);
+        return false;
+    })
 });
